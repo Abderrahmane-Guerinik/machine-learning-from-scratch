@@ -31,7 +31,7 @@ class LinearRegression:
         Predicts the target variable for X.
         X: Array containing the instances and there features.
         """
-        if X.ndim != 1:
+        if X.ndim == 1:
             X = X.reshape(1, -1) # make sur X is a 2D array
             
         y_hat = X @ self.coef_ + self.intercept_
