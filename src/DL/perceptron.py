@@ -9,8 +9,8 @@ class Perceptron:
     
     def fit(self, X, y):
         num_classes = len(np.unique(y))
-        self.W = np.zeros((X.shape[1], num_classes))
-        self.b = np.zeros(num_classes)
+        self.W = np.random.rand((X.shape[1], num_classes))
+        self.b = np.random.rand(num_classes)
     
     def predict(self, X):
        Z = X @ self.W + self.b
